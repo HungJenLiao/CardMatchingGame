@@ -1,0 +1,230 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Matching</title>
+    <link rel="stylesheet" href="{% static 'asset/css/style.css' %}">
+    <script src="{% static 'asset/js/script.js' %}" async></script>
+</head>
+<body>
+    {% if user.is_authenticated %}
+    <h1 class="page-title">{{user.username}}'s Card Matching Game</h1>
+    {% else %}
+    <h1 class="page-title">Card Matching Game</h1>
+    {% endif %}
+    <div class="overlay-text visible">
+        Start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        GameOver
+        <span class="overlay-text-small">
+            <a href="../rank/">
+                Click to See the Rank
+            </a>
+        </span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        Victory
+        <span class="overlay-text-small">
+            <a href="../rank/">
+                Click to See the Rank
+            </a>
+        </span>
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                Score <span id="score">0</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/FireDragon.png' %}">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/FireDragon.png' %}"">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Fish.png' %}"">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Fish.png' %}"">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Lizard.png' %}">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Lizard.png' %}">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Pikachu.png' %}">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Pikachu.png' %}">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Chaman.png' %}">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Chaman.png' %}">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Luka.png' %}">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Luka.png' %}">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Rocksnake.png' %}">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Rocksnake.png' %}">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Leaf.png' %}">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="{% static 'asset/img/Grass.jpeg' %}">
+                <img class="ball"
+                src="{% static 'asset/img/Ball.png' %}">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="{% static 'asset/img/Leaf.png' %}">
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

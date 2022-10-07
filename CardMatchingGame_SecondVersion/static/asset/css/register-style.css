@@ -1,0 +1,59 @@
+@font-face {
+    font-family: "Hollow";
+    src: url(source/Pokemon_Hollow.ttf);
+}
+
+@font-face {
+    font-family: "Solid";
+    src: url(source/Pokemon_Solid.ttf);
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.register-title {
+    color: red;
+    font-family: Solid;
+    font-size: 6em;
+    text-align: center;
+}
+
+.user-info-container {
+    text-align: center;
+}
+
+.register-info{
+    font-family: Hollow;
+    font-size: 4em;
+    color: crimson;
+}
+
+form {
+    margin: 5em;
+}
+
+input {
+    border-radius: 4px;
+    border: 2px solid red;
+    width: 300px;
+    height: 30px;
+    margin-bottom: 30px;
+}
+
+button {
+    border-radius: 4px;
+    width: 80px;
+    height: 40px;
+    font-family: solid;
+    font-size: 20px
+}
+
+h5 {
+    color: red;
+}
