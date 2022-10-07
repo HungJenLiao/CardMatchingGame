@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Matching</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <h1 class="page-title">Polemon Card Game</h1>
+    <div class="overlay-text visible">
+        Start
+    </div>
+    <div id="game-over-text" class="overlay-text">
+        GameOver
+        <span class="overlay-text-small">
+            Click to Restart
+        </span>
+    </div>
+    <div id="victory-text" class="overlay-text">
+        Victory
+        <span class="overlay-text-small">
+            Click to Start
+        </span>
+    </div>
+    <div class="game-container">
+        <div class="game-info-container">
+            <div class="game-info">
+                Time <span id="time-remaining">100</span>
+            </div>
+            <div class="game-info">
+                Score <span id="score">0</span>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/FireDragon.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/FireDragon.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Fish.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Fish.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Lizard.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Lizard.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Pikachu.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Pikachu.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Chaman.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Chaman.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Luka.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Luka.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Rocksnake.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Rocksnake.png">
+            </div>
+        </div><div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Leaf.png">
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-back card-face">
+                <img class="grass"
+                src="source/Grass.jpeg">
+                <img class="ball"
+                src="source/Ball.png">
+            </div>
+            <div class="card-front card-face">
+                <img class="card-value"
+                src="source/Leaf.png">
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

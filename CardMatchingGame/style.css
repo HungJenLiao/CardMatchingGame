@@ -1,0 +1,178 @@
+@font-face {
+    font-family: "Hollow";
+    src: url(source/Pokemon_Hollow.ttf);
+}
+
+@font-face {
+    font-family: "Solid";
+    src: url(source/Pokemon_Solid.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+}
+
+.page-title {
+    color: white;
+    font-family: Solid;
+    font-weight: normal;
+    font-size: 5em;
+    text-align: center;
+}
+
+.game-info-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.game-info{
+    color: brown;
+    font-family: Hollow;
+    font-weight: normal;
+    font-size: 3em;
+}
+
+.game-container{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 30px;
+    justify-content: center;
+    
+}
+
+.overlay-text{
+    display: none;
+    font-family: Solid;
+    color: crimson;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-text.visible {
+    display: flex;
+    flex-direction: column;
+    animation: overlay-grow 500ms forwards;
+}
+
+.overlay-text-small {
+    font-size: .4em;
+}
+
+@keyframes overlay-grow {
+    from{
+        background: rgba(0, 0, 0, 0);
+        font-size: 0em;
+    }
+    to {
+        background: rgba(0, 0, 0, 0.8);
+        font-size: 7em;
+    }
+}
+
+.card{
+    position: relative;
+    height: 175px;
+    width: 125px;
+}
+
+.card-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    backface-visibility: hidden;
+    overflow: hidden;
+    transition: transform 500ms ease-in-out;
+    border-color: gold;
+    border-radius: 12px;
+    border-width: 3px;
+    border-style: solid;
+}
+
+.card.visible .card-back {
+    transform: rotateY(-180deg);
+}
+
+.card.visible .card-front {
+    transform: rotateY(0deg);
+}
+
+.card.matched .card-value {
+    animation: dance 1s linear infinite 500ms
+}
+
+@keyframes dance {
+    0%, 100%{
+        transform: rotate(0deg);
+    }
+    25%{
+        transform: rotate(-20deg);
+    }
+    75%{
+        transform: rotate(30deg);
+    }
+}
+
+.card-front {
+    background-color: cadetblue;
+    transform: rotateY(180deg);
+}
+
+.ball{
+    margin-top: 5px;
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    transform: translateY(0deg);
+    transition: transform 100ms ease-in-out;
+}
+
+.grass{
+    position: absolute;
+    height: 175px;
+    width: 125px;
+}
+
+.card-back:hover .ball {
+    transform: rotateZ(20deg);
+}
+
+
+
+.card-value {
+    height: 150px;
+    width: 170px;
+}
+
+.card-front:hover .card-value {
+    transform: scale(1.1);
+}
+
+@media(max-width: 600px) {
+    .game-container {
+        grid-template-columns: repeat(2, auto);
+    }
+
+    .game-info-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
